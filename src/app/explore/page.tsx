@@ -363,7 +363,7 @@ function PostCard({
         </div>
 
         {/* Author Info */}
-        <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black to-transparent">
+        <div className="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-black to-transparent">
           <div className="flex items-center gap-2">
             <Avatar className="h-6 w-6">
               <AvatarImage src={post.author.avatar || ""} />

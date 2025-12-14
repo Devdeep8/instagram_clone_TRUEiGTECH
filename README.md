@@ -1,5 +1,9 @@
 # 📸 Instagram Clone - Social Media Platform
 
+
+demo emailId : devdeeppatidar8@gmail.com
+demo password : 12345678
+
 A full-featured Instagram-style social media application built with modern web technologies. This project demonstrates a complete social media platform with user authentication, post creation, social interactions, and real-time features.
 
 ## 🚀 Features
