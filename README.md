@@ -51,7 +51,7 @@ A full-featured Instagram-style social media application built with modern web t
 - **🔒 bcryptjs** - Password hashing
 
 ### Database
-- **📊 SQLite** - Local development database
+- **📊 postgresql** - Local development database
 - **🔄 Prisma Migrations** - Schema management
 
 ## 🏗️ Database Schema
