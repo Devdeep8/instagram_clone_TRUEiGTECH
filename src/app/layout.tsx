@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/providers";
-import RealtimeNotifications from "@/components/realtime-notifications";
+import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,12 +23,13 @@ export const metadata: Metadata = {
   keywords: ["Instagram", "Clone", "Next.js", "TypeScript", "Tailwind CSS", "Social Media"],
   authors: [{ name: "Instagram Clone Team" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "https://devdeep.dev/_next/image?url=%2Fimages%2Fdev.jpg&w=256&q=100",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon-16x16.png",
   },
   openGraph: {
     title: "Instagram Clone",
     description: "Share your moments with the world",
-    url: "https://chat.z.ai",
     siteName: "Instagram Clone",
     type: "website",
   },
@@ -43,14 +46,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-      >
+    <html lang="en">
+      <body className={`${poppins.variable} ${montserrat.variable} antialiased`}>
         <Providers>
           {children}
           <Toaster />
           {/* <RealtimeNotifications /> */}
+          
+          {/* Portfolio Link */}
+          <Link 
+            href="https://devdeep.dev" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-4 right-4 bg-linear-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 z-50 font-medium"
+          >
+            View My Portfolio
+          </Link>
         </Providers>
       </body>
     </html>
